@@ -1,0 +1,22 @@
+syntax = "proto3";      //语法：指定protobuf的版本号
+package pb;             //包名：指定通过protoc编译后的go文件包包名
+
+
+//定义一个protobuf协议的消息：
+
+message Student {                       //消息类型：通过message关键字定义一个Student的消息类型
+    string Name = 1;                    //消息字段：格式为：数据类型 + 字段名称 + 唯一编号(字段顺序)
+    uint32 Age = 2;                     
+    repeated string Emails = 3;         //重复字段repeated：在go中对应的emails类型为[]string
+    repeated PhoneNumber Phones = 4;    //重复字段嵌套一个message：在go中对应的Phones类型为[]*PhoneNumber
+    oneof Data {                        //oneof字段在go中对应isStudent_Data接口类型：Student_School和Student_Socre对象通过方法isStudent_Data()实现该接口
+        string School = 5;
+        uint32 Socre = 6;  
+    };
+}
+
+//定义一个protobuf协议的消息：
+
+message PhoneNumber {
+    string Number = 1;
+}

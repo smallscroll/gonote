@@ -1,0 +1,25 @@
+### 安装proto
+
+下载：protoc-3.8.0-rc-1-osx-x86_64.zip
+https://github.com/protocolbuffers/protobuf/releases
+
+
+```
+cd protoc-3.8.0-rc-1-osx-x86_64
+cp -r inclue/google /usr/local/inclue/
+cp bin/protoc /usr/local/bin/
+
+```
+
+### 获取GO语言的proto包
+
+```
+go get -v -u github.com/golang/protobuf/proto
+
+```
+
+```
+cd $GOPATH/src/github.com/golang/protobuf/protoc-gen-go
+sudo cp protoc-gen-go /usr/local/bin/
+
+```

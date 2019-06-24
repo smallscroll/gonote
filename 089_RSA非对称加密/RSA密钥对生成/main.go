@@ -13,7 +13,8 @@ import (
 	"os"
 )
 
-func generateRSAKey(bit int) error {
+//GenerateRSAKey RSA密钥对生成（指定位数）
+func GenerateRSAKey(bit int) error {
 
 	/*
 		私钥创建
@@ -96,7 +97,7 @@ func generateRSAKey(bit int) error {
 
 func main() {
 
-	err := generateRSAKey(2048)
+	err := GenerateRSAKey(2048)
 	if err != nil {
 		fmt.Println(err)
 		return

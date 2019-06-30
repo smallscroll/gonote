@@ -27,7 +27,7 @@ func main() {
 		return
 	}
 	//通过私钥获得公钥
-	publickKey := privateKey.PublicKey
+	publicKey := privateKey.PublicKey
 
 	//私钥签名
 	r, s, err := ecdsa.Sign(rand.Reader, privateKey, hash[:])
@@ -52,7 +52,7 @@ func main() {
 	s1.SetBytes(signature[len(signature)/2:]) //截取后32字节作为s1
 
 	//公钥验证
-	res := ecdsa.Verify(&publickKey, hash[:], &r1, &s1)
+	res := ecdsa.Verify(&publicKey, hash[:], &r1, &s1)
 	if res {
 		fmt.Println("签名有效")
 	} else {

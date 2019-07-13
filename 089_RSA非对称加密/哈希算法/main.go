@@ -7,7 +7,7 @@
 	算法示例：
 		linux: 	$ md5 [文件名]
 				$ sha256 [文件名]
-		OSX:	$ shasum -256 [文件名]
+		OSX:	$ shasum -a 256 [文件名]
 */
 
 package main

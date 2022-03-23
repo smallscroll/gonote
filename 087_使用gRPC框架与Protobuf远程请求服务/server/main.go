@@ -19,8 +19,8 @@ package main
 import (
 	"context"
 	"fmt"
+	pb "gonote/087_使用gRPC框架与Protobuf远程请求服务/myproto"
 	"net"
-	pb "test/myproto"
 
 	"google.golang.org/grpc"
 )

@@ -2,7 +2,7 @@ package main
 
 import (
 	"fmt"
-	"test/pb"
+	"gonote/085_Protobuf基本操作/pb"
 
 	"github.com/golang/protobuf/proto"
 )

@@ -4,7 +4,7 @@ import (
 	"context"
 	"fmt"
 
-	pb "test/myproto"
+	pb "gonote/087_使用gRPC框架与Protobuf远程请求服务/myproto"
 
 	"google.golang.org/grpc"
 )
